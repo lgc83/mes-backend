@@ -1,0 +1,18 @@
+# Eclipse / Workspace
+.metadata/
+.recommenders/
+*.log
+*.lock
+
+# Eclipse project files
+.project
+.classpath
+.settings/
+
+# Build output
+/target/
+/bin/
+
+# OS
+.DS_Store
+Thumbs.db
