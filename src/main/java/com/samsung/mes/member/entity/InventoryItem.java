@@ -49,6 +49,10 @@ public class InventoryItem {
     @NotBlank
     private String itemGroup;
 
+    @Column(name="spec", length=200)
+    @NotBlank
+    private String spec;
+
     @Column(name="warehouse", length=100)
     @NotBlank
     private String warehouse;
