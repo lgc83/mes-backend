@@ -59,7 +59,7 @@ public class InventoryItemService {
         InventoryItem e = repo.findById(id)
                 .orElseThrow(() -> new NoSuchElementException("재고 품목이 없습니다. id=" + id));
 
-        // itemCode 변경 허용 시: 중복 체크 필요
+        // itemCode 변경 허용 시: 중복 체크 필요.p
         String newCode = req.getItemCode().trim();
         if (!e.getItemCode().equals(newCode) && repo.existsByItemCode(newCode)) {
             throw new IllegalArgumentException("이미 존재하는 품목코드입니다. itemCode=" + newCode);

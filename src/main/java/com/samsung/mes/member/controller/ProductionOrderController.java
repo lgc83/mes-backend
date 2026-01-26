@@ -26,36 +26,57 @@ public class ProductionOrderController {
 
     private final ProductionOrderService service;
 
+
     @GetMapping
     public Page<ProductionOrderDTO> getOrders(
-        @RequestParam(name = "page", defaultValue = "0") int page,
-        @RequestParam(name = "size", defaultValue = "10") int size
+            @RequestParam(name="page", defaultValue = "0") int page,
+            @RequestParam(name="size", defaultValue = "10") int size
     ) {
-        Pageable pageable = PageRequest.of(
-            page,
-            size,
-            Sort.by(Sort.Direction.DESC, "id")
-        );
+        Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "id"));
         return service.getOrders(pageable);
     }
+
+
+	/*@GetMapping //HTTP GET 요청이 들어오면 이 메서드 실행하라는 뜻
+	public Page<ProductionOrderDTO> getOrders(
+//반환타입 Page<ProductionOrderDTO>
+@PageableDefault(size = 10) Pageable pageable  //파라미터: Pageable pageable
+//page=0 → 첫 페이지 size=10 → 10개씩
+			){
+		return service.getOrders(pageable);
+	}*/
+
+	/*@GetMapping 페이징을 안쓸 경우
+	public List<ProductionOrderDTO> getOrders(){
+		return service.getAllOrders();
+	}*/
 
     @PostMapping
     public ProductionOrderDTO createOrder(@RequestBody ProductionOrderDTO dto) {
         return service.createOrder(dto);
     }
 
+
+    //상세조회
     @GetMapping("/{id}")
-    public ProductionOrderDTO getOne(@PathVariable Long id) {
+    public ProductionOrderDTO getOne(@PathVariable("id") Long id) {
         return service.getOne(id);
     }
 
+    //수정
     @PutMapping("/{id}")
-    public ProductionOrderDTO update(@PathVariable Long id, @RequestBody ProductionOrderDTO dto) {
+    public ProductionOrderDTO update(@PathVariable("id") Long id, @RequestBody ProductionOrderDTO dto) {
         return service.update(id, dto);
     }
 
+    //삭제
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable("id") Long id) {
         service.delete(id);
     }
+
+
+
+
+
 }

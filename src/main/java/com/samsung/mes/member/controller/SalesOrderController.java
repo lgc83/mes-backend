@@ -25,44 +25,44 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/api/sales/orders")
 @CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
 public class SalesOrderController {
-	
+
 	private final SalesOrderService service;
-	
+
 	//수주등록
 	@PostMapping
 	public SalesOrderResponse create(@RequestBody SalesOrderRequest req) {
 		return service.create(req);
 	}
-	
-	
+
+
 	//수주목록조회(기간)
 	@GetMapping
 	public Page<SalesOrderResponse> list(
-@RequestParam(name = "from", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate from,
-@RequestParam(name = "to", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate to,
+			@RequestParam(name = "from", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate from,
+			@RequestParam(name = "to", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate to,
 //페이징
-@RequestParam(name="page", defaultValue = "0") int page,
-@RequestParam(name="size", defaultValue = "10") int size
-			){
+			@RequestParam(name="page", defaultValue = "0") int page,
+			@RequestParam(name="size", defaultValue = "10") int size
+	){
 		return service.list(from, to, page, size);
 	}
-	
-	
+
+
 	//수주상세
 	@GetMapping("/{id}")
 	public SalesOrderResponse get(@PathVariable Long id) {
 		return service.get(id);
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable Long id) {
 		service.delete(id);
 	}
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 
 }

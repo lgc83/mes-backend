@@ -30,8 +30,8 @@ public class PurchaseMaterialController {
 
     @GetMapping
     public Page<PurchaseMaterialResponse> list(
-            @RequestParam(name = "page", defaultValue = "0") int page,
-            @RequestParam(name = "size", defaultValue = "10") int size
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size
     ) {
         return service.list(PageRequest.of(page, size));
     }
