@@ -5,41 +5,84 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d8efab1-0bbd-4e80-8798-0a97bc3d52d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/controller/KpiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/controller/StandardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/controller/SystemInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/KpiRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/KpiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/StandardRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/StandardResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/SystemInfoRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/SystemInfoResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/entity/Kpi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/entity/Standard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/entity/SystemInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/repository/KpiRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/repository/StandardRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/repository/SystemInfoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/service/KpiService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/service/StandardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/service/SystemInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/controller/GlobalSearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/InventoryItemSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/KpiSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/MemberSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/ProductionOrderSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/PurchaseMaterialSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/SalesOrderSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/SpecUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/StandardSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/SystemInfoSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/search/GlobalSearchResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/search/SearchHit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/search/SearchType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/service/GlobalSearchService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/InventoryItemController.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MemberController.class.uniqueId6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MesApplication.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ProductionOrderController.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PurchaseMaterialController.class.uniqueId4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SalesOrderController.class.uniqueId7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SecurityConfig.class.uniqueId5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/WebConfig.class.uniqueId3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Kpi$KpiBuilder.class.uniqueId8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Kpi.class.uniqueId6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/KpiController.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/KpiRepository.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/KpiRequest$KpiRequestBuilder.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/KpiRequest.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/KpiResponse$KpiResponseBuilder.class.uniqueId7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/KpiResponse.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/KpiService.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/controller/InventoryItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/controller/InventoryItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/controller/KpiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/controller/KpiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/controller/ProductionOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/controller/ProductionOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/controller/PurchaseMaterialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/controller/PurchaseMaterialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/controller/SalesOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/controller/SalesOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/controller/StandardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/controller/StandardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/controller/SystemInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/controller/SystemInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/domain/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/domain/Gender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/InventoryItemRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/InventoryItemRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/InventoryItemResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/InventoryItemResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/KpiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/KpiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/KpiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/KpiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/LoginRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/LoginRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/MemberRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/MemberRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/ProductionOrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/ProductionOrderDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/PurchaseMaterialRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/PurchaseMaterialRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/PurchaseMaterialResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/PurchaseMaterialResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/SalesOrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/SalesOrderRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/SalesOrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/SalesOrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/StandardRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/StandardRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/StandardResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/StandardResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/SystemInfoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/SystemInfoRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/dto/SystemInfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/dto/SystemInfoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/entity/InventoryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/entity/InventoryItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/entity/Kpi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/entity/Kpi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/entity/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/entity/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/entity/ProductionOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/entity/ProductionOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/entity/PurchaseMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/entity/PurchaseMaterial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/entity/SalesOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/entity/SalesOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/entity/Standard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/entity/Standard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/entity/SystemInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/entity/SystemInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/repository/InventoryItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/repository/InventoryItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/repository/KpiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/repository/KpiRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/repository/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/repository/ProductionOrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/repository/ProductionOrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/repository/PurchaseMaterialRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/repository/PurchaseMaterialRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/repository/SalesOrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/repository/SalesOrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/repository/StandardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/repository/StandardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/repository/SystemInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/repository/SystemInfoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/service/InventoryItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/service/InventoryItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/service/KpiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/service/KpiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/service/ProductionOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/service/ProductionOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/service/PurchaseMaterialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/service/PurchaseMaterialService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/service/SalesOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/service/SalesOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/service/StandardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/service/StandardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/member/service/SystemInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/service/SystemInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/security/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/security/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samsung/mes/security/RequestValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samsung/mes/security/RequestValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,31 +120,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build mes.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.mes.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.MesApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Dev_Lee/workspace/project/mes&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build mes.executor": "Run",
+    "Gradle.mes.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.MesApplication.executor": "Debug",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Dev_Lee/workspace/project/mes",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.samsung.mes.member.dto" />
