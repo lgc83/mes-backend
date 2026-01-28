@@ -37,7 +37,7 @@ public class SecurityConfig{
 		config.setAllowedMethods(List.of("GET","POST","PUT","DELETE","OPTIONS"));
 		//허용할 HTTP 메서드 목록 (GET/POST/PUT/DELETE/OPTIONS)
 		config.setAllowedHeaders(List.of("*"));//프론트가 보내는 헤더는 전부 허용
-//예: Content-Type, Authorization 등		
+//예: Content-Type, Authorization 등
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		source.registerCorsConfiguration("/**", config);//모든 경로에 cors허용
 		return source;
