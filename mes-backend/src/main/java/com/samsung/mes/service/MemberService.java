@@ -83,8 +83,35 @@ public class MemberService {
 		return member;
 	}
 
-
-
+	/** OAuth2 소셜 로그인: provider+providerId로 조회, 없으면 신규 생성 */
+	@Transactional
+	public Member findOrCreateOAuthUser(String provider, String providerId, String email, String name) {
+		return memberRepository.findByProviderAndProviderId(provider, providerId)
+				.orElseGet(() -> {
+					// 기존 이메일로 가입된 회원이 있으면 provider 정보만 업데이트
+					Member existing = memberRepository.findByEmail(email).orElse(null);
+					if (existing != null) {
+						existing.setProvider(provider);
+						existing.setProviderId(providerId);
+						return memberRepository.save(existing);
+					}
+					// 신규 생성 (소셜 전용 - 비밀번호는 사용 안 함)
+					String[] names = (name != null && !name.isBlank()) ? name.split(" ", 2) : new String[]{"", ""};
+					String firstName = names.length > 1 ? names[0] : (names[0].isEmpty() ? "User" : names[0]);
+					String lastName = names.length > 1 ? names[1] : "";
+					String oauthPw = passwordEncoder.encode("OAUTH_" + providerId + "_" + System.currentTimeMillis());
+					Member member = Member.builder()
+							.email(email)
+							.password(oauthPw)
+							.firstName(firstName)
+							.lastName(lastName)
+							.gender("other")
+							.provider(provider)
+							.providerId(providerId)
+							.build();
+					return memberRepository.save(member);
+				});
+	}
 
 }
 /* 1. 비밀번호 일치 검사
