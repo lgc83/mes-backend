@@ -1,0 +1,28 @@
+# ===== 공통 =====
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.local
+.env.*.local
+
+# ===== Backend (mes-backend) =====
+mes-backend/build/
+mes-backend/target/
+mes-backend/bin/
+mes-backend/.gradle/
+mes-backend/.metadata/
+mes-backend/.settings/
+mes-backend/.classpath
+mes-backend/.project
+
+# ===== Frontend (mes-frontend) =====
+mes-frontend/node_modules/
+mes-frontend/dist/
+mes-frontend/dist-ssr/
+mes-frontend/*.local
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.iml

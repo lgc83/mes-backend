@@ -1,0 +1,9 @@
+{
+  "name": "mes-backend",
+  "private": true,
+  "scripts": {
+    "dev": ".\\gradlew.bat bootRun",
+    "start": ".\\gradlew.bat bootRun",
+    "build": ".\\gradlew.bat build"
+  }
+}
