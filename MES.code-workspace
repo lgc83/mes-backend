@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "path": "mes-frontend",
+      "name": "mes-frontend"
+    },
+    {
+      "path": "mes-backend",
+      "name": "mes-backend"
+    }
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.windows": "Git Bash (Frontend)",
+    "terminal.integrated.cwd": "${workspaceFolder:mes-frontend}"
+  }
+}
