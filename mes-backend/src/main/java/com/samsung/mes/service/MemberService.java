@@ -75,11 +75,13 @@ public class MemberService {
 		Member member = memberRepository.findByEmail(email.trim())
 				.orElseThrow(() -> new RuntimeException("존재하지 않는 이메일"));
 
-		boolean ok = passwordEncoder.matches(password, member.getPassword());
-		System.out.println(""+ok);
+		// 소셜 로그인으로 가입한 경우 → 이메일/비밀번호 로그인 불가
+		if (member.getProvider() != null && !member.getProvider().isBlank()) {
+			throw new RuntimeException("소셜가입:" + member.getProvider());
+		}
 
-		//틀리면 예외 맞으며 회원 반환
-		if(!ok) throw new RuntimeException("비밀번호 불일치");
+		boolean ok = passwordEncoder.matches(password, member.getPassword());
+		if (!ok) throw new RuntimeException("비밀번호 불일치");
 		return member;
 	}
 

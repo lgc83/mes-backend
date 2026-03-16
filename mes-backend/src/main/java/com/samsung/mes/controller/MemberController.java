@@ -73,30 +73,41 @@ public class MemberController {
     }
 
     @PostMapping("/login")
-    //이메일로 회원을 찾고 비밀번호가 맞는지 확인 맞으면 맴버객체를 반환하고 틀리면 null 처리등을 발생
     public ResponseEntity<?> login(@RequestBody LoginRequestDTO req) {
-        //System.out.println("✅ login 진입: " + req.getEmail());
-
         try {
             Member member = memberService.login(req.getEmail(), req.getPassword());
-            //System.out.println("✅ service login 성공: " + member.getEmail());
-
-            String token = jwtUtil.createToken(member.getEmail()); // 여기서도 터질 수 있음
-            //System.out.println("✅ token 생성 성공");
-
-            //이름하나 넣는것만으로 코드량이 추가
+            String token = jwtUtil.createToken(member.getEmail());
             LoginResponse response = new LoginResponse(
                     "success", token, member.getFirstName(), member.getLastName()
             );
-
-
             return ResponseEntity.ok(response);
+        } catch (RuntimeException e) {
+            String msg = e.getMessage();
+            if ("존재하지 않는 이메일".equals(msg)) {
+                return ResponseEntity.status(401).body(new ErrorBody("email_not_found", "등록되지 않은 이메일입니다. 회원가입을 먼저 진행해 주세요."));
+            }
+            if ("비밀번호 불일치".equals(msg)) {
+                return ResponseEntity.status(401).body(new ErrorBody("wrong_password", "비밀번호가 일치하지 않습니다."));
+            }
+            if (msg != null && msg.startsWith("소셜가입:")) {
+                String provider = msg.substring(5);
+                String providerName = switch (provider) {
+                    case "kakao" -> "카카오";
+                    case "naver" -> "네이버";
+                    case "google" -> "구글";
+                    default -> provider;
+                };
+                return ResponseEntity.status(401).body(new ErrorBody("oauth_only", providerName + "로 가입한 계정입니다. 아래 '" + providerName + "로 로그인' 버튼을 이용해 주세요."));
+            }
+            e.printStackTrace();
+            return ResponseEntity.status(500).body(new ErrorBody("error", msg != null ? msg : "login error"));
         } catch (Exception e) {
-            //System.out.println("❌ login 에러 발생: " + e.getClass().getName() + " / " + e.getMessage());
-            e.printStackTrace(); // ⭐ 이게 핵심
-            return ResponseEntity.status(500).body("login error");
+            e.printStackTrace();
+            return ResponseEntity.status(500).body(new ErrorBody("error", "로그인 처리 중 오류가 발생했습니다."));
         }
     }
+
+    private record ErrorBody(String code, String message) {}
 
     @PostMapping("/logout")
     public ResponseEntity<Void> logout(HttpServletRequest request){
