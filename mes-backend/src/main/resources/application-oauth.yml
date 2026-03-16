@@ -10,15 +10,18 @@ spring:
     oauth2:
       client:
         registration:
-          # ----- 구글 (가장 간단) -----
+          # ----- 구글 -----
           # 1. https://console.cloud.google.com 접속
           # 2. 프로젝트 생성 → API 및 서비스 → 사용자 인증 정보
           # 3. OAuth 2.0 클라이언트 ID 생성 (웹 애플리케이션)
           # 4. 승인된 리디렉션 URI: http://localhost:9500/login/oauth2/code/google
           google:
-            client-id: ${GOOGLE_CLIENT_ID:your-google-client-id}
-            client-secret: ${GOOGLE_CLIENT_SECRET:your-google-client-secret}
+            client-id: ${GOOGLE_CLIENT_ID:}
+            client-secret: ${GOOGLE_CLIENT_SECRET:}
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://localhost:9500/login/oauth2/code/google"
             scope: email, profile
+            client-name: Google
 
           # ----- 카카오 ----- (application.yml에 정의됨 - 여기서 제외)
           # ----- 네이버 -----
@@ -27,8 +30,8 @@ spring:
           # 3. API 설정 → 회원정보(이메일, 이름, 프로필사진) 사용 API
           # 4. Callback URL: http://localhost:9500/login/oauth2/code/naver
           naver:
-            client-id: bq3XPN7CGtS9MkKNB8zU
-            client-secret: tw1UygnsZl
+            client-id: ${NAVER_CLIENT_ID:}
+            client-secret: ${NAVER_CLIENT_SECRET:}
             client-authentication-method: client_secret_post
             authorization-grant-type: authorization_code
             redirect-uri: "http://localhost:9500/login/oauth2/code/naver"

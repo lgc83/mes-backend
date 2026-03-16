@@ -5,8 +5,8 @@ spring:
       client:
         registration:
           kakao:
-            client-id: 7f6aebac1b314bc6b5cd1ff243241190
-            client-secret: npRPKQnx7W49LRh4Jang4kjImgfBaiql
+            client-id: ${KAKAO_CLIENT_ID:}
+            client-secret: ${KAKAO_CLIENT_SECRET:}
             client-authentication-method: none
             authorization-grant-type: authorization_code
             redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"

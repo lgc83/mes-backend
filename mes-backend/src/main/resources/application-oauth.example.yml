@@ -1,0 +1,24 @@
+# ===========================================
+# OAuth2 환경 변수 설정 가이드
+# ===========================================
+# application-oauth.yml은 환경 변수를 사용합니다.
+# 아래 변수들을 설정한 후 실행하세요.
+#
+# Windows (PowerShell):
+#   $env:GOOGLE_CLIENT_ID="your-google-client-id"
+#   $env:GOOGLE_CLIENT_SECRET="your-google-client-secret"
+#   $env:NAVER_CLIENT_ID="your-naver-client-id"
+#   $env:NAVER_CLIENT_SECRET="your-naver-client-secret"
+#   $env:KAKAO_CLIENT_ID="your-kakao-rest-api-key"
+#   $env:KAKAO_CLIENT_SECRET="your-kakao-client-secret"
+#
+# Windows (CMD):
+#   set GOOGLE_CLIENT_ID=your-google-client-id
+#   set GOOGLE_CLIENT_SECRET=your-google-client-secret
+#   ...
+#
+# Linux/Mac:
+#   export GOOGLE_CLIENT_ID="your-google-client-id"
+#   export GOOGLE_CLIENT_SECRET="your-google-client-secret"
+#   ...
+# ===========================================
