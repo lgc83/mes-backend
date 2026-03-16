@@ -7,6 +7,7 @@ Thumbs.db
 .env.*.local
 
 # ===== Backend (mes-backend) =====
+mes-backend/src/main/resources/application-local.yml
 mes-backend/build/
 mes-backend/target/
 mes-backend/bin/
